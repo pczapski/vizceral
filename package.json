@@ -15,7 +15,9 @@
     "build:js": "webpack --bail && webpack --bail -p",
     "watch": "webpack --watch -d",
     "release": "release",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-core": "^6.18.0",
@@ -43,7 +45,8 @@
     "lodash": "^4.12.0",
     "numeral": "^1.5.3",
     "three": "^0.86.0",
-    "tween.js": "16.6.0"
+    "tween.js": "16.6.0",
+    "snyk": "^1.189.0"
   },
   "keywords": [
     "webgl",
@@ -59,5 +62,6 @@
     "lint"
   ],
   "author": "Justin Reynolds <jreynolds@netflix.com>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "snyk": true
 }
